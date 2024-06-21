@@ -1,0 +1,325 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body, html {
+   height: 100%;
+   font-family: "Roboto", sans-serif;
+ }
+ 
+ body {
+   margin: 0;
+ }
+
+ .chat-bot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 430px;
+  border: none;
+  z-index: 1000; /* Ensure it is above other elements */
+}
+ 
+ .header {
+   min-height: 10vh;
+   width: 100%;
+   background-color: #0069AF;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   padding-top: 0;
+ }
+ 
+ nav {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 20px;
+   margin-top: 0;
+ }
+ 
+ .logo-container {
+   margin-right: auto;
+ }
+ 
+ nav img {
+   width: 100px;
+ }
+ 
+ .hamburger-menu {
+   display: none;
+   color: #fff;
+   margin-left: auto;
+   font-size: 22px;
+   cursor: pointer;
+ }
+ 
+ .nav-links-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+ }
+ 
+ .nav-links ul {
+   display: flex;
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .nav-links ul li {
+   margin: 0 10px;
+ }
+ 
+ .nav-link-box {
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 8px;
+   padding: 10px 20px;
+   transition: background-color 0.3s, transform 0.3s;
+ }
+ 
+ .nav-link-box a {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+ }
+ 
+ .nav-link-box:hover {
+   background-color: rgba(255, 255, 255, 0.2);
+   transform: scale(1.1);
+ }
+ 
+ .hero {
+   background-color: #f5f5f5;
+   padding: 20px;
+   text-align: center;
+
+ }
+ 
+ .hero-image {
+   height: 75px;
+   width: 100%;
+   background-color: #ccc;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #333;
+   font-size: 20px;
+
+ }
+ 
+ .contact-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+ }
+ 
+ .contact-box {
+   width: 80%;
+   max-width: 800px;
+   background-color: #fff;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   margin-bottom: 20px;
+ }
+ 
+ .contact-box h2 {
+   color: #003366;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ 
+ .contact-box form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .form-row {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   margin-bottom: 15px;
+ }
+ 
+ .form-column {
+   width: 48%;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .form-column-full {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .contact-box label {
+   margin: 10px 0 5px;
+ }
+ 
+ .contact-box input, .contact-box textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+ }
+ 
+ .contact-box textarea {
+   resize: none;
+ }
+ 
+ .contact-box button {
+   background-color: #003366;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s, transform 0.3s;
+ }
+ 
+ .contact-box button:hover {
+   background-color: #00509e;
+   transform: scale(1.05);
+ }
+ 
+ .contact-info {
+   width: 80%;
+   max-width: 800px;
+   text-align: left;
+   padding: 20px;
+ }
+ 
+ .contact-info h2 {
+   color: #003366;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ 
+ .contact-info p {
+   margin-bottom: 10px;
+ }
+ 
+ .contact-info a {
+   color: #003366;
+   text-decoration: none;
+   transition: color 0.3s;
+ }
+ 
+ .contact-info a:hover {
+   color: #00509e;
+ }
+ 
+ footer {
+   background-color: #003366;
+   color: white;
+   text-align: center;
+   padding: 10px 0;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+ }
+ 
+ footer p {
+   margin: 0;
+ }
+ 
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+   .hamburger-menu {
+       display: block;
+       position: absolute;
+       right: 20px;
+       top: 20px;
+       z-index: 3; /* Ensure hamburger icon is above other content */
+       color: #fff;
+       font-size: 22px;
+       cursor: pointer;
+   }
+ 
+   .nav-links {
+       display: none;
+       position: fixed;
+       background: #f44336;
+       height: 100vh;
+       width: 200px;
+       top: 0;
+       right: 0;
+       text-align: left;
+       z-index: 2;
+       flex-direction: column;
+       justify-content: center;
+       padding-top: 80px; /* Adjust according to your header height */
+       box-shadow: -1px 0px 7px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
+   }
+ 
+   .nav-links.active {
+       display: flex;
+   }
+ 
+   .nav-links i#closeMenu {
+       position: absolute;
+       top: 20px;
+       left: 20px;
+       font-size: 22px;
+       color: white;
+       cursor: pointer;
+   }
+ 
+   .nav-links ul {
+       flex-direction: column;
+       padding: 0;
+       margin: 0;
+   }
+ 
+   .nav-links ul li {
+       margin: 20px 0;
+   }
+ 
+   .nav-links ul li .nav-link-box {
+       width: 100%;
+       text-align: center;
+   }
+ 
+   .event-news-grid {
+       flex-direction: column;
+       align-items: center;
+   }
+ 
+   .upcoming-event, .news-updates, .stay-connected {
+       width: 90%;
+       margin-bottom: 20px;
+   }
+ 
+   .subscribe {
+       flex-direction: column;
+   }
+ 
+   .subscribe input {
+       border-radius: 4px;
+       margin-bottom: 10px;
+   }
+ 
+   .subscribe button {
+       border-radius: 4px;
+   }
+ 
+   .social-media {
+       flex-direction: column;
+       align-items: center;
+   }
+ 
+   .social-media p {
+       margin-bottom: 10px;
+   }
+ } 

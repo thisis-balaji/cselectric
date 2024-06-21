@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <div class="logo-container">
+        <a href="index.html"><img src="logo.jpeg" alt="C & S Electric Logo"></a>
+      </div>
+      <div class="hamburger-menu">
+        <i class="fas fa-bars" id="hamburgerMenu"></i>
+      </div>
+      <div class="nav-links-container" id="navLinksContainer">
+        <div class="nav-links">
+          <i class="fas fa-times" id="closeMenu"></i>
+          <ul>
+            <li><div class="nav-link-box"><a href="index.html">Home</a></div></li>
+            <li><div class="nav-link-box"><a href="about.html">About</a></div></li>
+            <li><div class="nav-link-box"><a href="product.html">Products</a></div></li>
+            <li><div class="nav-link-box"><a href="marketsegments.html">Market Segments</a></div></li>
+            <li><div class="nav-link-box"><a href="contact.html">Contact Us</a></div></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+  <main>
+    <section class="hero">
+      <div class="hero-image">
+        <!-- <img src="CANDS_PICTURES/Screenshot 2024-06-20 153026.png" alt="Banner Placeholder"> -->
+         <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <section class="contact-container">
+      <div class="contact-box">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+          <div class="form-row">
+            <div class="form-column">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company">
+
+              <label for="job-title">Job Title</label>
+              <input type="text" id="job-title" name="job-title">
+
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-column">
+              <label for="phone">Phone No.</label>
+              <input type="tel" id="phone" name="phone">
+
+              <label for="city">City</label>
+              <input type="text" id="city" name="city">
+
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-column-full">
+              <label for="query">Your Query</label>
+              <textarea id="query" name="query" rows="4"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Registered Office:</strong></p>
+        <p>210, 211 & 212, Second Floor, ‘Salcon Aurum’ Building, Plot No. 4, Jasola District Centre, New Delhi- 110025</p>
+        <p>Email: <a href="mailto:info@cselectric.co.in">info@cselectric.co.in</a></p>
+        <p>Phone No.: +91-11-6922 5600</p>
+
+        <p><strong>Customer Care:</strong></p>
+        <p>Email: <a href="mailto:customercare@cselectric.co.in">customercare@cselectric.co.in</a></p>
+        <p>Toll Free Number: 1800-572-2012</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 C&S Electric. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerMenu = document.getElementById('hamburgerMenu');
+      const closeMenu = document.getElementById('closeMenu');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.add('active');
+        hamburgerMenu.style.display = 'none';
+        closeMenu.style.display = 'block'; // Show close icon
+      });
+
+      closeMenu.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        hamburgerMenu.style.display = 'block';
+        closeMenu.style.display = 'none'; // Hide close icon
+      });
+
+      function adjustNavDisplay() {
+        if (window.innerWidth > 768) {
+          closeMenu.style.display = 'none';
+        } else {
+          if (navLinks.classList.contains('active')) {
+            closeMenu.style.display = 'block';
+          } else {
+            closeMenu.style.display = 'none';
+          }
+        }
+      }
+
+      window.addEventListener('resize', adjustNavDisplay);
+      adjustNavDisplay();
+    });
+  </script>
+
+  
+<iframe class = "chat-bot" width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e148bcdc-a732-466d-9c0a-f239d576d12f"></iframe>
+
+</body>
+</html>

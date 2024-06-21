@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+<!-- nav bar -->
+<section class="header">
+    <nav>
+      <div class="logo-container">
+        <a href="index.html"><img src="logo.jpeg" alt="C & S Electric Logo"></a>
+      </div>
+      <div class="hamburger-menu">
+        <i class="fas fa-bars" id="hamburgerMenu"></i>
+      </div>
+      <div class="nav-links-container">
+        <div class="nav-links">
+          <i class="fas fa-times" id="closeMenu"></i>
+          <ul>
+            <li><div class="nav-link-box"><a href="index.html">Home</a></div></li>
+            <li><div class="nav-link-box"><a href="about.html">About</a></div></li>
+            <li><div class="nav-link-box"><a href="product.html">Products</a></div></li>
+            <li><div class="nav-link-box"><a href="marketsegments.html">Market Segments</a></div></li>
+            <li><div class="nav-link-box"><a href="contact.html">Contact Us</a></div></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</section>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="CANDS_PICTURES/banner1_about.jpg" alt="Children with painted faces">
+            </div>
+        </section>
+
+        <section class="about-us">
+            <h1>About Us</h1>
+            <br>
+            <p>C&S Electric was founded in 1966, with a dream to be a company which plays a vital role in the development of the power infrastructure of India and makes the "Made in India" label respected the world over. Today we can satisfactorily claim that we live and continue to develop this vision every day.</p>
+            <br>
+
+            <div class="cards-container">
+                <div class="card">
+                    <img src="CANDS_PICTURES/company-profile_about.jpg" alt="Company Snapshot">
+                    <h3>Company Snapshot</h3>
+                </div>
+                <div class="card">
+                    <img src="CANDS_PICTURES/vision.png" alt="Vision, Mission & Values">
+                    <h3>Vision, Mission & Values</h3>
+                </div>
+                <div class="card">
+                    <img src="CANDS_PICTURES/quality_about.jpg" alt="Manufacturing Plants">
+                    <h3>Manufacturing Plants</h3>
+                </div>
+                <div class="card">
+                    <img src="CANDS_PICTURES/bod_about.jpg" alt="Board of Directors">
+                    <h3>Board of Directors</h3>
+                </div>
+                <div class="card">
+                    <img src="CANDS_PICTURES/awards_about.jpg" alt="Awards & Achievements">
+                    <h3>Awards & Achievements</h3>
+                </div>
+                <div class="card">
+                    <img src="CANDS_PICTURES/csr_abput.jpg" alt="Corporate Social Responsibility">
+                    <h3>Corporate Social Responsibility</h3>
+                </div>
+                <div class="card">
+                    <img src="CANDS_PICTURES/rd-1_about.jpg" alt="Research & Development">
+                    <h3>Research & Development</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="event-news">
+        <div class="container">
+            <div class="event-news-grid">
+                <div class="upcoming-event">
+                    <h3>Upcoming Event</h3>
+                    <div class="event-card">
+                        <img src="event-image.jpg" alt="Event Image">
+                    </div>
+                </div>
+                <div class="news-updates">
+                    <h3>NEWS & UPDATES</h3>
+                    <div class="news-item">
+                        <img src="news1.jpg" alt="News 1">
+                        <div class="news-content">
+                            <p>C&S Electric trains ITI students for a brighter future</p>
+                            <span>May 28, 2024</span>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="news2.jpeg" alt="News 2">
+                        <div class="news-content">
+                            <p>C&S Electric launches the We4She Program</p>
+                            <span>May 22, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stay-connected">
+                    <h3>STAY CONNECTED WITH US</h3>
+                    <div class="newsletter">
+                        <img src="newsletter.jpeg" alt="Newsletter">
+                        <a href="#">View More</a>
+                    </div>
+                    <div class="subscribe">
+                        <input type="email" placeholder="Your email address">
+                        <button>Subscribe</button>
+                    </div>
+                    <div class="social-media">
+                        <p>LinkedIn</p>
+                        <p>Instagram</p>
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>C&S Electric Limited</p>
+            <p>Registered Office: 210, 211 & 212, Second Floor, Salcon Aurum Building, Plot No. 4, Jasola District Centre, New Delhi-110 025 (INDIA) | CIN NO. U31909DL1971PLC005672</p>
+            <p>Copyright © 2024 C&S Electric Limited</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">GST Number</a> |
+            <a href="#">Vendor KYC</a> |
+            <a href="#">Investors Relations</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const hamburgerMenu = document.getElementById('hamburgerMenu');
+          const closeMenu = document.getElementById('closeMenu');
+          const navLinks = document.querySelector('.nav-links');
+    
+          hamburgerMenu.addEventListener('click', function() {
+            navLinks.classList.add('active');
+            hamburgerMenu.style.display = 'none';
+            closeMenu.style.display = 'block'; // Show close icon
+          });
+    
+          closeMenu.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            hamburgerMenu.style.display = 'block';
+            closeMenu.style.display = 'none'; // Hide close icon
+          });
+    
+          function adjustNavDisplay() {
+            if (window.innerWidth > 768) {
+              closeMenu.style.display = 'none';
+            } else {
+              if (navLinks.classList.contains('active')) {
+                closeMenu.style.display = 'block';
+              } else {
+                closeMenu.style.display = 'none';
+              }
+            }
+          }
+    
+          window.addEventListener('resize', adjustNavDisplay);
+          adjustNavDisplay();
+        });
+    </script>
+
+    
+<iframe class = "chat-bot" width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e148bcdc-a732-466d-9c0a-f239d576d12f"></iframe>
+</body>
+</html>
